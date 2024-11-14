@@ -1,363 +1,668 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <!--
-    Modified from the Debian original for Ubuntu
-    Last updated: 2022-03-22
-    See: https://launchpad.net/bugs/1966004
-  -->
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Apache2 Ubuntu Default Page: It works</title>
-    <style type="text/css" media="screen">
-  * {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-  }
+<!DOCTYPE html>
+<html lang="ru"
+      dir="ltr"
+      class="dark-mode ">
+<head>
+    <title>Школьные Лекции</title>
 
-  body, html {
-    padding: 3px 3px 3px 3px;
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="token" content="XSsHdZjrit93mM2h0t6T1YaBXeVitlrLH44B6Dk8">
+    <meta name="base-url" content="http://192.168.56.6">
+    <meta name="theme-color" content="#000000"/>
 
-    background-color: #D8DBE2;
+    <!-- Social Cards Meta -->
+    <meta property="og:title" content="Школьные Лекции">
+    <meta property="og:url" content="http://192.168.56.6">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="http://192.168.56.6/dist/styles.css?version=v24.10.1">
 
-    font-family: Ubuntu, Verdana, sans-serif;
-    font-size: 11pt;
-    text-align: center;
-  }
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="256x256" href="http://192.168.56.6/uploads/images/system/2024-11/c7Jicons8-skola-100-2-1.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="http://192.168.56.6/uploads/images/system/2024-11/wYbicons8-skola-100-2-1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://192.168.56.6/uploads/images/system/2024-11/wYbicons8-skola-100-2-1.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="http://192.168.56.6/uploads/images/system/2024-11/dj9icons8-skola-100-2-1.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="http://192.168.56.6/uploads/images/system/2024-11/0fLicons8-skola-100-2-1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://192.168.56.6/uploads/images/system/2024-11/JSZicons8-skola-100-2-1.png">
 
-  div.main_page {
-    position: relative;
-    display: table;
+    <!-- PWA -->
+    <link rel="manifest" href="http://192.168.56.6/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
 
-    width: 800px;
+    <!-- OpenSearch -->
+    <link rel="search" type="application/opensearchdescription+xml" title="Школьные Лекции" href="http://192.168.56.6/opensearch.xml">
 
-    margin-bottom: 3px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 0px 0px 0px;
+    <!-- Custom Styles & Head Content -->
+    <style>
+    :root {
+        --color-primary: #000000;
+        --color-primary-light: rgba(0,0,0,0.15);
+        --color-link: #429fe3;
+        --color-bookshelf: #ff5454;
+        --color-book: #389f60;
+        --color-chapter: #ee7a2d;
+        --color-page: #429fe3;
+        --color-page-draft: #a66ce8;
+    }
+</style>
+    
+    
+    <!-- Translations for JS -->
+    </head>
+<body
+          class="">
 
-    border-width: 2px;
-    border-color: #212738;
-    border-style: solid;
+        <a class="px-m py-s skip-to-content-link print-hidden" href="#main-content">Перейти к основному контенту</a>    <div component="notification"
+     option:notification:type="success"
+     option:notification:auto-hide="true"
+     option:notification:show="false"
+     style="display: none;"
+     class="notification pos"
+     role="alert">
+    <svg class="svg-icon" data-icon="check-circle" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"/></svg> <span></span><div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+</div>
 
-    background-color: #FFFFFF;
+<div component="notification"
+     option:notification:type="warning"
+     option:notification:auto-hide="false"
+     option:notification:show="false"
+     style="display: none;"
+     class="notification warning"
+     role="alert">
+    <svg class="svg-icon" data-icon="info" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 17h2v-6h-2zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8M11 9h2V7h-2z"/></svg> <span></span><div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+</div>
 
-    text-align: center;
-  }
+<div component="notification"
+     option:notification:type="error"
+     option:notification:auto-hide="false"
+     option:notification:show="false"
+     style="display: none;"
+     class="notification neg"
+     role="alert">
+    <svg class="svg-icon" data-icon="danger" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27zM12 17.3c-.72 0-1.3-.58-1.3-1.3s.58-1.3 1.3-1.3 1.3.58 1.3 1.3-.58 1.3-1.3 1.3m1-4.3h-2V7h2z"/><path fill="none" d="M0 0h24v24H0z"/></svg> <span></span><div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+</div>    <header id="header" component="header-mobile-toggle" class="primary-background px-xl grid print-hidden">
+    <div class="flex-container-row justify-space-between gap-s items-center">
+        <a href="http://192.168.56.6" data-shortcut="home_view" class="logo">
+            <img class="logo-image" src="http://192.168.56.6/uploads/images/system/2024-11/icons8-skola-100-2-1.png" alt="Logo">
+                <span class="logo-text">Школьные Лекции</span>
+    </a>        <div class="hide-over-l py-s">
+            <button type="button"
+                    refs="header-mobile-toggle@toggle"
+                    title="Развернуть меню заголовка"
+                    aria-expanded="false"
+                    class="mobile-menu-toggle"><svg class="svg-icon" data-icon="more" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2"/></svg></button>
+        </div>
+    </div>
 
-  div.page_header {
-    height: 180px;
-    width: 100%;
+    <div class="flex-container-column items-center justify-center hide-under-l">
+            <form component="global-search" action="http://192.168.56.6/search" method="GET" class="search-box" role="search" tabindex="0">
+    <button id="header-search-box-button"
+            refs="global-search@button"
+            type="submit"
+            aria-label="Поиск"
+            tabindex="-1"><svg class="svg-icon" data-icon="search" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"/><path fill="none" d="M0 0h24v24H0z"/></svg></button>
+    <input id="header-search-box-input"
+           refs="global-search@input"
+           type="text"
+           name="term"
+           data-shortcut="global_search"
+           autocomplete="off"
+           aria-label="Поиск" placeholder="Поиск"
+           value="">
+    <div refs="global-search@suggestions" class="global-search-suggestions card">
+        <div refs="global-search@loading" class="text-center px-m global-search-loading"><div class="loading-container">
+    <div></div>
+    <div></div>
+    <div></div>
+    </div></div>
+        <div refs="global-search@suggestion-results" class="px-m"></div>
+        <button class="text-button card-footer-link" type="submit">Показать все</button>
+    </div>
+</form>        </div>
 
-    background-color: #F5F6F7;
-  }
+    <nav refs="header-mobile-toggle@menu" class="header-links">
+        <div class="links text-center">
+            <a class="hide-over-l" href="http://192.168.56.6/search"><svg class="svg-icon" data-icon="search" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"/><path fill="none" d="M0 0h24v24H0z"/></svg>Поиск</a>
+            <a href="http://192.168.56.6/shelves"
+           data-shortcut="shelves_view"><svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg>Категорий</a>
+        <a href="http://192.168.56.6/books" data-shortcut="books_view"><svg class="svg-icon" data-icon="books" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.252 1.708H8.663a1.77 1.77 0 0 0-1.765 1.764v14.12c0 .97.794 1.764 1.765 1.764h10.59a1.77 1.77 0 0 0 1.764-1.765V3.472a1.77 1.77 0 0 0-1.765-1.764M8.663 3.472h4.412v7.06L10.87 9.208l-2.206 1.324z"/><path fill="none" d="M30.61 3.203h24v24h-24z"/><path d="M2.966 6.61v14c0 1.1.9 2 2 2h14v-2h-14v-14z"/></svg>Заметки</a>
+            <a href="http://192.168.56.6/settings"
+           data-shortcut="settings_view"><svg class="svg-icon" data-icon="settings" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.49.49 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5"/></svg>Настройки</a>
+        
+        </div>
+                    <div class="dropdown-container" component="dropdown" option:dropdown:bubble-escapes="true">
+    <span class="user-name py-s hide-under-l" refs="dropdown@toggle"
+          aria-haspopup="true" aria-expanded="false" aria-label="Меню профиля" tabindex="0">
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+        <span class="name">Admin</span> <svg class="svg-icon" data-icon="caret-down" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5z"/><path fill="none" d="M0 0h24v24H0z"/></svg>    </span>
+    <ul refs="dropdown@menu" class="dropdown-menu" role="menu">
+        <li>
+            <a href="http://192.168.56.6/favourites" data-shortcut="favourites_view" class="icon-item">
+                <svg class="svg-icon" data-icon="star" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path fill="none" d="M0 0h24v24H0z"/></svg>                <div>Мое избранное</div>
+            </a>
+        </li>
+        <li>
+            <a href="http://192.168.56.6/user/admin" data-shortcut="profile_view" class="icon-item">
+                <svg class="svg-icon" data-icon="user" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"/><path fill="none" d="M0 0h24v24H0z"/></svg>                <div>Посмотреть профиль</div>
+            </a>
+        </li>
+        <li>
+            <a href="http://192.168.56.6/my-account" class="icon-item">
+                <svg class="svg-icon" data-icon="user-preferences" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M10.67 13.02c-.22-.01-.44-.02-.67-.02-2.42 0-4.68.67-6.61 1.82-.88.52-1.39 1.5-1.39 2.53V20h9.26a6.96 6.96 0 0 1-.59-6.98M20.75 16c0-.22-.03-.42-.06-.63l1.14-1.01-1-1.73-1.45.49q-.48-.405-1.08-.63L18 11h-2l-.3 1.49q-.6.225-1.08.63l-1.45-.49-1 1.73 1.14 1.01c-.03.21-.06.41-.06.63s.03.42.06.63l-1.14 1.01 1 1.73 1.45-.49q.48.405 1.08.63L16 21h2l.3-1.49q.6-.225 1.08-.63l1.45.49 1-1.73-1.14-1.01c.03-.21.06-.41.06-.63M17 18c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2"/></svg>                <div>Моя учетная запись</div>
+            </a>
+        </li>
+        <li><hr></li>
+        <li>
+            <form action="http://192.168.56.6/preferences/toggle-dark-mode" method="post">
+    <input type="hidden" name="_token" value="XSsHdZjrit93mM2h0t6T1YaBXeVitlrLH44B6Dk8" autocomplete="off">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="_return" value="http://192.168.56.6">
+            <button class="icon-item"><span><svg class="svg-icon" data-icon="light-mode" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 15.31 23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6"/></svg></span><span>Светлый режим</span></button>
+    </form>        </li>
+        <li><hr></li>
+        <li>
+                        <form action="http://192.168.56.6/logout" method="post">
+                <input type="hidden" name="_token" value="XSsHdZjrit93mM2h0t6T1YaBXeVitlrLH44B6Dk8" autocomplete="off">
+                <button class="icon-item" data-shortcut="logout">
+                    <svg class="svg-icon" data-icon="logout" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="m14.29 8.207 1.41-1.41 5 5-5 5-1.41-1.41 2.58-2.59H7.2v-2h9.67zM5 3h14a2 2 0 0 1 2 2v4h-2V5H5v14h14v-4h2v4a2 2 0 0 1-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2"/></svg>                    <div>Выход</div>
+                </button>
+            </form>
+        </li>
+    </ul>
+</div>            </nav>
+</header>
 
-  div.page_header span {
-    margin: 15px 0px 0px 50px;
-
-    font-size: 180%;
-    font-weight: bold;
-  }
-
-  div.page_header img {
-    margin: 3px 0px 0px 40px;
-
-    border: 0px 0px 0px;
-  }
-
-  div.banner {
-    padding: 9px 6px 9px 6px;
-    background-color: #E9510E;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 112%;
-    text-align: center;
-    position: absolute;
-    left: 40%;
-    bottom: 30px;
-    width: 20%;
-  }
-
-  div.table_of_contents {
-    clear: left;
-
-    min-width: 200px;
-
-    margin: 3px 3px 3px 3px;
-
-    background-color: #FFFFFF;
-
-    text-align: left;
-  }
-
-  div.table_of_contents_item {
-    clear: left;
-
-    width: 100%;
-
-    margin: 4px 0px 0px 0px;
-
-    background-color: #FFFFFF;
-
-    color: #000000;
-    text-align: left;
-  }
-
-  div.table_of_contents_item a {
-    margin: 6px 0px 0px 6px;
-  }
-
-  div.content_section {
-    margin: 3px 3px 3px 3px;
-
-    background-color: #FFFFFF;
-
-    text-align: left;
-  }
-
-  div.content_section_text {
-    padding: 4px 8px 4px 8px;
-
-    color: #000000;
-    font-size: 100%;
-  }
-
-  div.content_section_text pre {
-    margin: 8px 0px 8px 0px;
-    padding: 8px 8px 8px 8px;
-
-    border-width: 1px;
-    border-style: dotted;
-    border-color: #000000;
-
-    background-color: #F5F6F7;
-
-    font-style: italic;
-  }
-
-  div.content_section_text p {
-    margin-bottom: 6px;
-  }
-
-  div.content_section_text ul, div.content_section_text li {
-    padding: 4px 8px 4px 16px;
-  }
-
-  div.section_header {
-    padding: 3px 6px 3px 6px;
-
-    background-color: #8E9CB2;
-
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 112%;
-    text-align: center;
-  }
-
-  div.section_header_grey {
-    background-color: #9F9386;
-  }
-
-  .floating_element {
-    position: relative;
-    float: left;
-  }
-
-  div.table_of_contents_item a,
-  div.content_section_text a {
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  div.table_of_contents_item a:link,
-  div.table_of_contents_item a:visited,
-  div.table_of_contents_item a:active {
-    color: #000000;
-  }
-
-  div.table_of_contents_item a:hover {
-    background-color: #000000;
-
-    color: #FFFFFF;
-  }
-
-  div.content_section_text a:link,
-  div.content_section_text a:visited,
-   div.content_section_text a:active {
-    background-color: #DCDFE6;
-
-    color: #000000;
-  }
-
-  div.content_section_text a:hover {
-    background-color: #000000;
-
-    color: #DCDFE6;
-  }
-
-  div.validator {
-  }
-    </style>
-  </head>
-  <body>
-    <div class="main_page">
-      <div class="page_header floating_element">
-        <img src="icons/ubuntu-logo.png" alt="Ubuntu Logo"
-             style="width:184px;height:146px;" class="floating_element" />
+    <div id="content" components="" class="block">
+        
+    <div class="flex-fill flex">
+        <div class="content flex">
+            <div id="main-content" class="scroll-body">
+                
+    <div class="container px-xl py-s flex-container-row gap-l wrap justify-space-between">
+        <div class="icon-list inline block">
+            <button component="expand-toggle"
+        option:expand-toggle:target-selector=".entity-list.compact .entity-item-snippet"
+        option:expand-toggle:update-endpoint="http://192.168.56.6/preferences/change-expansion/home-details"
+        option:expand-toggle:is-open="false"
+        type="button"
+        class="icon-list-item text-muted text-link">
+    <span><svg class="svg-icon" data-icon="expand-text" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 19h6v-2H4zM20 5H4v2h16zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3 3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+    <span>Подробности</span>
+</button>
+        </div>
         <div>
-          <span style="margin-top: 1.5em;" class="floating_element">
-            Apache2 Default Page
-          </span>
+            <div class="icon-list inline block">
+                <form action="http://192.168.56.6/preferences/toggle-dark-mode" method="post">
+    <input type="hidden" name="_token" value="XSsHdZjrit93mM2h0t6T1YaBXeVitlrLH44B6Dk8" autocomplete="off">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="_return" value="http://192.168.56.6">
+            <button class="text-muted icon-list-item text-link"><span><svg class="svg-icon" data-icon="light-mode" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 15.31 23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6"/></svg></span><span>Светлый режим</span></button>
+    </form>            </div>
         </div>
-        <div class="banner">
-          <div id="about"></div>
-          It works!
-        </div>
-
-      </div>
-      <div class="content_section floating_element">
-        <div class="content_section_text">
-          <p>
-                This is the default welcome page used to test the correct 
-                operation of the Apache2 server after installation on Ubuntu systems.
-                It is based on the equivalent page on Debian, from which the Ubuntu Apache
-                packaging is derived.
-                If you can read this page, it means that the Apache HTTP server installed at
-                this site is working properly. You should <b>replace this file</b> (located at
-                <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.
-          </p>
-
-          <p>
-                If you are a normal user of this web site and don't know what this page is
-                about, this probably means that the site is currently unavailable due to
-                maintenance.
-                If the problem persists, please contact the site's administrator.
-          </p>
-
-        </div>
-        <div class="section_header">
-          <div id="changes"></div>
-                Configuration Overview
-        </div>
-        <div class="content_section_text">
-          <p>
-                Ubuntu's Apache2 default configuration is different from the
-                upstream default configuration, and split into several files optimized for
-                interaction with Ubuntu tools. The configuration system is
-                <b>fully documented in
-                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full
-                documentation. Documentation for the web server itself can be
-                found by accessing the <a href="/manual">manual</a> if the <tt>apache2-doc</tt>
-                package was installed on this server.
-          </p>
-          <p>
-                The configuration layout for an Apache2 web server installation on Ubuntu systems is as follows:
-          </p>
-          <pre>
-/etc/apache2/
-|-- apache2.conf
-|       `--  ports.conf
-|-- mods-enabled
-|       |-- *.load
-|       `-- *.conf
-|-- conf-enabled
-|       `-- *.conf
-|-- sites-enabled
-|       `-- *.conf
-          </pre>
-          <ul>
-                        <li>
-                           <tt>apache2.conf</tt> is the main configuration
-                           file. It puts the pieces together by including all remaining configuration
-                           files when starting up the web server.
-                        </li>
-
-                        <li>
-                           <tt>ports.conf</tt> is always included from the
-                           main configuration file. It is used to determine the listening ports for
-                           incoming connections, and this file can be customized anytime.
-                        </li>
-
-                        <li>
-                           Configuration files in the <tt>mods-enabled/</tt>,
-                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> directories contain
-                           particular configuration snippets which manage modules, global configuration
-                           fragments, or virtual host configurations, respectively.
-                        </li>
-
-                        <li>
-                           They are activated by symlinking available
-                           configuration files from their respective
-                           *-available/ counterparts. These should be managed
-                           by using our helpers
-                           <tt>
-                                a2enmod,
-                                a2dismod,
-                           </tt>
-                           <tt>
-                                a2ensite,
-                                a2dissite,
-                            </tt>
-                                and
-                           <tt>
-                                a2enconf,
-                                a2disconf
-                           </tt>. See their respective man pages for detailed information.
-                        </li>
-
-                        <li>
-                           The binary is called apache2 and is managed using systemd, so to
-                           start/stop the service use <tt>systemctl start apache2</tt> and
-                           <tt>systemctl stop apache2</tt>, and use <tt>systemctl status apache2</tt>
-                           and <tt>journalctl -u apache2</tt> to check status.  <tt>system</tt>
-                           and <tt>apache2ctl</tt> can also be used for service management if
-                           desired.
-                           <b>Calling <tt>/usr/bin/apache2</tt> directly will not work</b> with the
-                           default configuration.
-                        </li>
-          </ul>
-        </div>
-
-        <div class="section_header">
-            <div id="docroot"></div>
-                Document Roots
-        </div>
-
-        <div class="content_section_text">
-            <p>
-                By default, Ubuntu does not allow access through the web browser to
-                <em>any</em> file outside of those located in <tt>/var/www</tt>,
-                <a href="http://httpd.apache.org/docs/2.4/mod/mod_userdir.html" rel="nofollow">public_html</a>
-                directories (when enabled) and <tt>/usr/share</tt> (for web
-                applications). If your site is using a web document root
-                located elsewhere (such as in <tt>/srv</tt>) you may need to whitelist your
-                document root directory in <tt>/etc/apache2/apache2.conf</tt>.
-            </p>
-            <p>
-                The default Ubuntu document root is <tt>/var/www/html</tt>. You
-                can make your own virtual hosts under /var/www.
-            </p>
-        </div>
-
-        <div class="section_header">
-          <div id="bugs"></div>
-                Reporting Problems
-        </div>
-        <div class="content_section_text">
-          <p>
-                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the
-                Apache2 package with Ubuntu. However, check <a
-                href="https://bugs.launchpad.net/ubuntu/+source/apache2"
-                rel="nofollow">existing bug reports</a> before reporting a new bug.
-          </p>
-          <p>
-                Please report bugs specific to modules (such as PHP and others)
-                to their respective packages, not to the web server itself.
-          </p>
-        </div>
-
-      </div>
     </div>
-    <div class="validator">
+
+    <div class="container" id="home-default">
+        <div class="grid third gap-x-xxl no-row-gap">
+            <div>
+                
+                <div id="recently-viewed" class="card mb-xl">
+                    <h3 class="card-title">Мои недавние просмотры</h3>
+                    <div class="px-m">
+                        <div class="entity-list compact">
+                    <a href="http://192.168.56.6/shelves/angliiskii-iazyk" class="bookshelf   entity-list-item" data-entity-type="bookshelf" data-entity-id="5">
+    <span role="presentation" class="icon text-bookshelf"><svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Английский язык</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">План уроков</p>
+</div>
     </div>
-  </body>
+</a>                    <a href="http://192.168.56.6/shelves/matematika" class="bookshelf   entity-list-item" data-entity-type="bookshelf" data-entity-id="4">
+    <span role="presentation" class="icon text-bookshelf"><svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Математика</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">План уроков</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/shelves/administraciia" class="bookshelf   entity-list-item" data-entity-type="bookshelf" data-entity-id="6">
+    <span role="presentation" class="icon text-bookshelf"><svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Администрация</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/imia-sushhestvitelnoe" class="book   entity-list-item" data-entity-type="book" data-entity-id="4">
+    <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Имя существительное</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/shelves/russkii-iazyk" class="bookshelf   entity-list-item" data-entity-type="bookshelf" data-entity-id="3">
+    <span role="presentation" class="icon text-bookshelf"><svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Русский язык</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">План уроков </p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/primer/page/primer" class="page   entity-list-item" data-entity-type="page" data-entity-id="52">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">пример</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">пример</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/primer" class="book   entity-list-item" data-entity-type="book" data-entity-id="16">
+    <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">пример</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/rabotniki" class="book   entity-list-item" data-entity-type="book" data-entity-id="13">
+    <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Работники</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/shelves/programming-languages" class="bookshelf   entity-list-item" data-entity-type="bookshelf" data-entity-id="1">
+    <span role="presentation" class="icon text-bookshelf"><svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Programming languages</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/ekaterina-XR1" class="page   entity-list-item" data-entity-type="page" data-entity-id="51">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Екатерина</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov" class="book   entity-list-item" data-entity-type="book" data-entity-id="15">
+    <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Список классов</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                
+                <div id="recent-pages" class="card mb-xl">
+                    <h3 class="card-title">Недавно обновленные страницы</h3>
+                    <div id="recently-updated-pages" class="px-m">
+                        <div class="entity-list compact">
+                    <a href="http://192.168.56.6/books/primer/page/primer" class="page   entity-list-item" data-entity-type="page" data-entity-id="52">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">пример</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">пример</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/ekaterina-XR1" class="page   entity-list-item" data-entity-type="page" data-entity-id="51">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Екатерина</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/semen-dfg" class="page   entity-list-item" data-entity-type="page" data-entity-id="50">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Семён</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/anna-i2h" class="page   entity-list-item" data-entity-type="page" data-entity-id="49">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Анна</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/vasilisa-r5m" class="page   entity-list-item" data-entity-type="page" data-entity-id="48">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Василиса</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/petr-Pvh" class="page   entity-list-item" data-entity-type="page" data-entity-id="47">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Пётр</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/ekaterina-Lm4" class="page   entity-list-item" data-entity-type="page" data-entity-id="46">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Екатерина</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/semen-dPp" class="page   entity-list-item" data-entity-type="page" data-entity-id="45">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Семён</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/anna-RkO" class="page   entity-list-item" data-entity-type="page" data-entity-id="44">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Анна</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>                    <a href="http://192.168.56.6/books/spisok-klassov/page/vasilisa-AGD" class="page   entity-list-item" data-entity-type="page" data-entity-id="43">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Василиса</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">ФИО-Год Рождения-ФИО родителей-Адрес проживания</p>
+</div>
+    </div>
+</a>            </div>
+                    </div>
+                                            <a href="http://192.168.56.6/pages/recently-updated" class="card-footer-link">Показать все</a>
+                                    </div>
+            </div>
+
+            <div>
+                <div id="recent-activity" class="card mb-xl">
+                    <h3 class="card-title">Недавние действия</h3>
+                    <div class="px-m">
+                        <div class="activity-list">
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Василий">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/vasilii">Василий</a>
+    
+    обновил полку
+
+            <a href="http://192.168.56.6/shelves/angliiskii-iazyk">Английский язык</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/admin">Admin</a>
+    
+    удалил полку
+
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/admin">Admin</a>
+    
+    создал страницу
+
+            <a href="http://192.168.56.6/books/primer/page/primer">пример</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/admin">Admin</a>
+    
+    обновил полку
+
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/admin">Admin</a>
+    
+    создал книгу
+
+            <a href="http://192.168.56.6/books/primer">пример</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/admin">Admin</a>
+    
+    создал полку
+
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/admin">Admin</a>
+    
+    обновил разрешения
+
+            <a href="http://192.168.56.6/shelves/administraciia">Администрация</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/admin">Admin</a>
+    
+    обновил главу
+
+            <a href="http://192.168.56.6/books/spisok-klassov/chapter/1v">1В</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/admin">Admin</a>
+    
+    создал страницу
+
+            <a href="http://192.168.56.6/books/spisok-klassov/page/anna-i2h">Анна</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="http://192.168.56.6/user_avatar.png" alt="Admin">
+    </div>
+
+<div>
+            <a href="http://192.168.56.6/user/admin">Admin</a>
+    
+    создал страницу
+
+            <a href="http://192.168.56.6/books/spisok-klassov/page/semen-dfg">Семён</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>23 часа назад</small></span>
+</div>
+            </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    
+    <div component="back-to-top" class="back-to-top print-hidden">
+        <div class="inner">
+            <svg class="svg-icon" data-icon="chevron-up" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"/><path fill="none" d="M0 0h24v24H0z"/></svg> <span>Наверх</span>
+        </div>
+    </div>
+
+            <script src="http://192.168.56.6/dist/app.js?version=v24.10.1" type="module" nonce="1jsRbH6NacSepa1pLiGLLGlE"></script>
+        
+    </body>
 </html>
